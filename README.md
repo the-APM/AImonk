@@ -21,8 +21,8 @@ This project consists of two main components:
 - This will start both the microservices with the UI_backend service working at <mark>http://localhost:5001</mark>.
 
 ## Endpoint
-- The AI_backend microservice is called from the UI_backend and the image file is passed along for object detection using using a pretrained YOLOv5 model.
-- Access the UI_backend by sending a POST request at <mark>http://localhost:5001/upload </mark>. The body of the request would require the image file to be processed with the key "image".
+- The AI_backend microservice is called from the UI_backend and the image file is passed along for object detection using a pretrained YOLOv5 model.
+- Access the UI_backend by sending a POST request at <mark>http://localhost:5001/upload </mark>. The body of the request would require the image file to be passed with the key "image".
 - On successful execution, A json object would be returned with the list of detections.
 
 ## Example
