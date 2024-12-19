@@ -1,0 +1,23 @@
+version: "3.7"
+services:
+  ai-backend:
+    build:
+      context: ./AI_backend
+    ports:
+      - "5000:5000"
+    networks:
+      - backend
+
+  ui-backend:
+    build:
+      context: ./UI_backend
+    ports:
+      - "5001:5001"
+    depends_on:
+      - ai-backend
+    networks:
+      - backend
+
+networks:
+  backend:
+    driver: bridge
